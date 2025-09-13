@@ -99,7 +99,7 @@ function handleGuess() {
     if (seccessGuess) {
         messageArea.innerHTML = `you win the word is <span>${wordToGuess}</span>`;
         if (numberOfHints === 2) {
-            messageArea.innerHTML = `<p> congratz you didn't use any hint! </p>`;
+            messageArea.innerHTML += `<p> congratz you didn't use any hint! </p>`;
         }
         let allTries = document.querySelectorAll(".inputs > div");
         allTries.forEach((tryDiv) => { tryDiv.classList.add("disabled"); });
