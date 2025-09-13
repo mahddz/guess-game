@@ -13,7 +13,6 @@ let numberOfHints = 2;
 let wordToGuess = "";
 const words = ["Create", "Update", "Delete", "Master", "Branch", "Mainly", "Elzero", "School"];
 wordToGuess = words[Math.floor(Math.random() * words.length)].toLocaleLowerCase();
-console.log(wordToGuess)
 let messageArea = document.querySelector(".message");
 
 document.querySelector(".hint span").innerText = `(${numberOfHints})`;
@@ -81,7 +80,6 @@ const guessButton = document.querySelector(".check");
 guessButton.addEventListener("click", handleGuess);
 function handleGuess() {
     let seccessGuess = true;
-    console.log(wordToGuess);
     for (let i = 1; i <= numberOfLetters; i++) {
         const inputfield = document.querySelector(`#guess-${currentTry}-letter-${i}`);
         const letter = inputfield.value.toLowerCase();
