@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+
+}
+
+:root {
+    --primary-color: rgb(223, 136, 15);
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    background-color: white;
+    margin: 0 0 50px;
+    padding: 10px;
+}
+
+.guess-game {
+    text-align: center;
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .game-area {
+        .inputs {
+            >div {
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-right: 15px;
+                }
+            }
+
+            .disabled {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+
+            input {
+                margin: 0 5px;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+                border: none;
+                border-bottom: 2px solid #333;
+                outline: none;
+                caret-color: var(--primary-color);
+                background-color: white;
+
+                &.yes-in-place {
+                    background-color: orange;
+                    border: orange;
+                    color: white;
+                }
+
+                &.not-in-place {
+                    background-color: aqua;
+                    border: aqua;
+                    color: white;
+                }
+
+                &.no {
+                    background-color: black;
+                    border: black;
+                    color: white;
+                }
+            }
+
+        }
+
+        .control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            margin: 20px auto;
+            gap: 10px;
+
+            button {
+
+                border: none;
+                border-radius: 5px;
+                height: 40px;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                cursor: pointer;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+            }
+
+            .check {
+                width: 250px;
+                cursor: pointer;
+                background-color: var(--primary-color);
+            }
+
+            .hint {
+                width: 70px;
+                background-color: aqua;
+            }
+        }
+    }
+}
+
+.keys-color {
+    .key-color {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background-color: white;
+
+        .key {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            margin-right: 10px;
+
+            &.in-place {
+                background-color: orange;
+            }
+
+            &.not-in-place {
+                background-color: aqua;
+            }
+
+            &.no {
+                background-color: black;
+            }
+        }
+
+        .key-text {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+    }
+
+}
+
+.message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+
+    span {
+        font-weight: bold;
+        display: block;
+        font-size: 30px;
+        color: var(--primary-color);
+        text-transform: capitalize;
+
+    }
+
+    p {
+        margin-top: 10px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: #eee;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+}
